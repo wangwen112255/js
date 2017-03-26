@@ -4,41 +4,45 @@
 	<meta charset="UTF-8">
 	<title>jss</title>
 </head>
+<style type="text/css">
+  .clock{
+    width: 200px;
+    height: 50px;
+    background-color: #fadf;
+    color: green;
+    border-radius: 15px;
+    line-height: 50px;
+    font-size: 24px;
+    text-align: center;
+    
+  }
+
+</style>
 <body>
+<div class="clock">
+  <span id="cid">提交成功，<span id="second">3</span>s后即将即将跳转</span>
+</div>
+<a href="http://www.baidu.com" id='aid'>点击</a>
+<button id="stopclock">暂停</button>
 <script type="text/javascript">
-// json={'username':'wangwenshaui','age':20};
-// for(var i in json){
-// 	alert(i)
-
-// a="mimimg";
-// c=eval(json);
-
-// alert(c.age)
-week=2;
-// if(week==1){
-// 	alert("周一");
-// }else if(week==2){
-// 	alert("周二");
-// }else if(week==3){
-// 	alert("周三")
+// aobj=document.getElementById("aid");
+// aobj.onclick=function(){
+//   // r=confirm("您确定要去百度？");
+//   // if(!r){
+//     return false;
+//   // }
 // }
-switch(week){
-case 1:
-   alert("周一");
-   break;
- case 2:
-   alert("周二")
-   break;
- case 3:
-   alert("周三")
-   break;
- default:
-   alert("请填进去一个数字");
+i=3;
+sid=document.getElementById("second");
 
+setTimeout(function(){
 
+  location="http://www.baidu.com";
 
+},3000)
 
-}
+  
+
 </script>	
 
 </body>
@@ -123,5 +127,76 @@ eval()执行字符串表达式 eg b="a=1+1";  alert(a)//不执行  alert(eval(b)
 --------------其中的break一定要记得写上，终止程序，否则
  3).while循环
  4).for循环
- 5).forIn循环
+ 5).forIn循环   进行循环其中的对象 
+
+6.js的信息框
+  1.alert()
+  2.confirm()  返回值是FALSE或者true
+  prompt(‘请输进去您的名字？) 返回的是您输进去的值
+7.JS中的内置对像
+  JS中的对象：
+  JS内置对象JS自带的
+  浏览器对象 bom对象
+  文档对象   dom对象
+  JS事件对象
+----JS内置对象-------
+|  1.数学(Math.)
+|   1>属性
+    Math.PI
+    2>方法
+|    Math.ceil()
+     Math.floor()
+     math.round()
+     math.max()
+     math.min
+     // alert(Math.PI); //3.14
+     // alert(Math.round(3.56));//4--四舍五如
+     // alert(Math.ceil(3.15)) //4---比他大的一个整数
+     // alert(Math.floor(3.65)) //3---比他小的一个整数
+      // alert(Math.random())
+      // alert(Math.min(303030,200,'sdfsd'))
+|---------- ---------
+|  2.日期 dataobj=new Date()
+     1.属性
+      
+     2.方法
+     getFullYear()
+     getMonth()
+     function getDates(){
+       dataobj=new Date();
+     hour=dataobj.getHours();
+     minute=dataobj.getMinutes();
+     second=dataobj.getSeconds();
+     str=hour+":"+minute+":"+second;
+
+     cid=document.getElementById("cid");
+     cid.innerHTML=str;
+     }
+     getDates();
+     setInterval(function(){
+     getDates();
+     },1000)
+     ----//过几秒后页面跳转----
+     i=3;
+     sid=document.getElementById("second");
+     setInterval(function(){
+     i--;
+     sid.innerHTML=i;
+     if(i==0){
+       location="http://www.baidu.com";
+     }
+     },1000)
+  
+  3. ---定时器---
+     setInterval(function,4)//每过完4秒钟进行执行一次，同时可以进行返回一个定时器的对象，
+     通过clearInterval()删除定时器
+     ---超时器---
+     创建：timeobj=setTimeout(func,1000)
+|    删除：clertTimeout(timeobj)清楚超时器
+
+
+|
+|
+
+|
 -->
