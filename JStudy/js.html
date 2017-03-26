@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jss</title>
+</head>
+<body>
+<script type="text/javascript">
+// json={'username':'wangwenshaui','age':20};
+// for(var i in json){
+// 	alert(i)
+
+// a="mimimg";
+// c=eval(json);
+
+// alert(c.age)
+week=2;
+// if(week==1){
+// 	alert("周一");
+// }else if(week==2){
+// 	alert("周二");
+// }else if(week==3){
+// 	alert("周三")
+// }
+switch(week){
+case 1:
+   alert("周一");
+   break;
+ case 2:
+   alert("周二")
+   break;
+ case 3:
+   alert("周三")
+   break;
+ default:
+   alert("请填进去一个数字");
+
+
+
+
+}
+</script>	
+
+</body>
+</html>
+
+<!--
+js的学习
+1.js的放置位置（内联，外联。并且尽量放在最后的</body>的前面
+2.js标签
+3.js的注释
+4.js定义变??量
+5.js输出变量
+6.js的始终把十种变量类型
+1>字符串
+2>整形
+3>浮点
+4>布尔类型
+5>对象   new Object();
+6>json对象   
+7>数组 new Array() 或者 []
+8>null  |
+9>NaN  |5-"sdfsd"
+10>undefined    |没有定义的
+7.函数的定义和调用
+8.变量的作用域
+  函数里面带VAR的为局部变量。其他的均为全局
+2017-03-26__________---------------------------
+1.变量的类型测试
+1)typeof()
+ 一.string   字符串类型
+ 二.number   NAN  float int
+ 三.object   array  json object null
+ 四.undefined  undefined
+#JS中的所有变量都是对象
+---------数组非常重要--------
+检验数组的测试方法：
+
+2)arr(变量名) instanceof Array;
+2.顶级全局方法（前面不拥有对象，直接使用）
+typeof()
+parse
+类型转换：
+#####出现加号之后应该考虑有没有字符串。如果没有字符串的话进行两边数据转换
+parseInt(Float)  强制转整型  eg:parseInt("10abc")=>10
+Number   强制转成整形，能力有限   eg:parseInt("10abc")=>NaN
+String   整形转成字符串
+Boolean()返回的是真和加，两边进行数据类型转换，进行 Boolea    将字符传和数字类型转成bool值。非零的全为true   和数字相加布尔值真被转换为1
+eval()执行字符串表达式 eg b="a=1+1";  alert(a)//不执行  alert(eval(b));  里面必须是表达式 执行字符串里面的东西可以进行执行   
+3.在JS中不用写对象的，直接可以使用方法的对象（并不用写对象本身，直接写对象就行了）
+1>Global对象
+以上的所有全局方法
+2>window对象(浏览器提供的一些对象)
+.alert()
+全称是window.alert()
+4.变量类型转换
+1.整形到字符串:String(10)   Str=num+"";
+2.字符串转成整形  parseInt(str)
+3.所有的类型转为bool值
+  返回false的是  “” ，0, 0.0,null,undefined,
+  返回真的特殊的“空格” “0”
+  转换的方式：1.Boolean()2.!!变量
+4.json字符串转换为json对象
+   json="({'username':'wangwenshaui','age':20})";
+   eval中必须加上圆括号
+5.in()的用法
+  in可以遍历对象和数组，主要是针对数组的下表和对象的属性。而不是数组的值或者对象的实际属性值
+    json={"name":"wangwen",'age':"19"};
+    alert("name" in json);
+    arr=["wanwensha","age"];
+    alert(2 in arr);
+ 5.js的基本语法 
+ 1).if语句------if-elseif-else-多分支的语句，一旦满足条件直接跳出，只能命中其中的一个，不会命中多个条件
+ 2).switch语句
+   switch{
+	case 1:
+	alert(1)
+	break;
+	case 2:
+	alert(2)
+	break;
+   }
+--------------其中的break一定要记得写上，终止程序，否则
+ 3).while循环
+ 4).for循环
+ 5).forIn循环
+-->
