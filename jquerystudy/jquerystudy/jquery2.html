@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery中的第二节</title>
+</head>
+<style type="text/css">
+	.addc{
+		color: blue;
+		font-size: 30px;
+	}
+	.shop{
+		width: 200px;
+		height: 200px;
+		box-shadow: 0px 0px 5px 5px #515151;
+		overflow: hidden;
+		float: left;
+		margin-left: 30px;
+	}
+	.zhezhao{
+		background-color: #515151;
+		opacity: 0.5;
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: none;
+	}
+	.p-text{
+		margin: 0px;
+		color: #fff;
+		top: 0px;
+		left: 0px;
+
+		background-color: #dd625c;
+		position: absolute;
+
+	}
+</style>
+<body>
+<div class="zhezhao">
+	<button>欢迎购买</button>
+</div>
+<form action="mign.php"> 
+	<input type="text" name="password" id="">
+	<p><input type="checkbox" name="" id=""></p>
+	<p><input type="checkbox" name="" id=""></p>
+	<p><input type="checkbox" name="" id=""></p>
+	<p><input type="checkbox" name="" id=""></p>
+	<p><input type="checkbox" name="" id=""></p>
+	<p><input type="checkbox" name="" id=""></p>
+</form>
+<button id='all'>全选</button>
+<button id='notall'>全不选</button>
+<button id='unall'>反选</button>
+<button id='alled'>选中的</button>
+<hr>
+<div class="m">
+<div><p>mijkjklgjjg</p></div>
+<p id="mi">sdsdfdsdfsd </p>
+<p class="mi">sdsdfdsdfsd </p>
+<p class="mi">sdsdfdsdfsd </p>
+<p class="mi">sdsdfdsdfsd </p>
+</div>
+<div class="result"></div>
+
+<img src="images/1_small.jpg">
+<hr>
+<button class="btnadd">追加</button>
+<div class="appends" style="background-color:#ccc">
+	这俩是的原来的内筒
+</div>
+<div style="height:100px;padding:10px;margin:15px;width:100px;background-color: #ccc" class="heights">
+	
+</div>
+<hr>
+<div class="shop">
+	<img src="images/3_small.jpg" width="100%">
+</div>
+<div class="shop">
+	<img src="images/3_small.jpg" width="100%">
+</div>
+<div class="shop">
+	<img src="images/3_small.jpg" width="100%">
+</div>
+<div class="shops shop" style="position:relative;">
+	<p class="p-text">dsfsdfsafasdf</p>
+	<img src="images/3_small.jpg" width="100%">
+</div>
+<script src='jquery.min.js'></script>
+<script type="text/javascript">
+	// alert($)
+	$(".btnadd").click(function(){
+	   // var mi='<b>123454545</b>';
+	   // mi.appendTo($('.appends'))
+	   // $('#mi').insertBefore('.appends')
+	   // $('.appends').before($('#mi'))
+	   // $('#mi').wrapInner('<i></i>')
+	   $("#mi").replaceWith('<b>这是我所提哈U您的</b>')
+	})
+	$('img').click(function(){
+		alert(this.src)
+	})
+	$('#mi').click(function(){
+		$(this).toggleClass('addc')
+	})
+	$('#mi').next('span').css({'color':'blue'})
+	// $('.m').children('p').css({'color':'blue'})
+	// $('.mi').not($('.mi').eq(2)).
+	$('#alled').click(function(){
+		// alert($(':checked'))
+		alert($(this).attr('src'))
+		// $(':checked').parent().appendTo('.result')
+	})
+	$('input[name="password"]').val('migdgasd')
+	$('#all').click(function(){
+		$(":checkbox").attr({'checked':true})
+			
+	})
+	$('#notall').click(function(){
+		$(":checkbox").attr({'checked':false})
+			
+	})
+	$('#unall').click(function(){
+		$(":checkbox").each(function(){
+			this.checked=!this.checked;
+		})
+			
+	})
+	$(window).scroll(function(){
+		h=$(this).scrollTop();
+		document.title=h
+	})
+
+	// $('.heights').mouseenter(function(){
+	// 	// alert($(this).width());
+	// 	alert($(this).innerWidth());
+	// })
+	// $('.shop').mouseenter(function(){
+	// 	potop=$(this).offset().top
+	// 	poleft=$(this).offset().left;
+	// 	$('.zhezhao').css({'top':potop+'px','left':poleft+'px'}).show();
+	// })
+	$('.shops').mouseenter(function(){
+		potop=$(this).offset().top
+		poleft=$(this).offset().left;
+		$('.zhezhao').css({'top':potop+'px','left':poleft+'px'}).show();
+	})
+
+</script>	
+</body>
+
+</html>
+<!-- 筛选器
+1.过滤
+  eq();------类似于:eq()
+  not();
+  first()
+  last()；
+  slice();从哪里开查找
+2.查找--关系查找
+	children();----必须是子元素  类似于div>p
+	find()----只要是后代元素就可以  类似于 div p
+	next()     div+p
+	prev()
+	parent()
+	nextAll()---寻找元素后面所有的兄弟
+	next -nextAll prev 这几个可以传递进去对象名字,对象名字可以进行再次筛选，如果不进行传递标签名表示任何的后面或者前面的都可以被筛选出来
+3.串联
+ andSelf()
+ add()
+ 并列的关系
+
+什么时候用筛选器?什么时候用基本选择器？
+当其中的含有的this对像的时候可以用筛选器---基础选择器中出现this关键字
+------------------------------------
+属性：以下必须是jquery对象
+1.attr({json对像}) setAttribute()
+:$(this).attr({'name':'ming'})
+获取属性的时候尽量用attr,,如果使用dom获取其中的属性很有可能出现问题
+2.class类名
+removeClass()
+当添加css({}),当其中的style样式比较多时候用addClasss, removeClass---移除类
+toggleClass---切换类
+3.html()
+4.val();
+
+
+
+------------文档处理--------------
+ 1.内部插入(往一个div的里面进行插入)
+	append()；
+	appendTo()；
+	$('.appends').append($('p'))--将p追加到类appends中，只能追加一次，
+    $('p').appendTo('.appends')---将p追加到类中。。这里可以进行clone追加，多次追加
+    Var a='<b>这里是追加的内筒</b>'
+    其中这样的直接是html代码的只能用$('.appends').append(a),并且这种追加可以进行多次追加
+    prepend------在向前追加
+    prependTo()----向前追加到-----
+ 2.外部插入（往一个div的周围插入）
+	1)before---网后面插如	
+	2)after
+	3)insertBefore
+	4)insertAfter-----向后面进行插如
+ 3.包围
+ 	wrap(）将对象的外部用东西包裹$('.wrap').wrap('<i></i>')---.wrap用<i></i>进行包裹
+ 	wrapInner()  每一个对象，很多包裹
+ 		将对象的内部用东西包裹$('.wrap').wrap('<i></i>')---.wrap用<i></i>进行包裹
+    wrapAll()所有对像一个包裹
+ 4.替换
+    replacewith()-----将选择出来的对象进行替换
+    $('p').repalceWith('<b>mijfdf</b>')用b标签来替换b标签内容
+
+    repalceAll()
+ 5.删除
+ 6.复制
+  clone()----克隆一个不带上事件an
+  clone(true)克隆对象并且包含事件
+ 
+<!-- css 的处理
+1.样式，
+ css)()
+ css({})
+2.位置
+offset()-----offset().left--获取距离左边的距离--offset().top----获取其中的距离上面的高度---获取所选择元素的坐标位置
+注意：不管是不是定位的元素。只要是这种offset()获取元素的左上角和屏幕上左上角的坐标位置。这样可以是实现很多的位置东西.,这个相对于body而言的、
+position()----和offset的作用是一样的
+父亲：relavtive
+儿子：absolute
+如果其中的父亲有定位则使用position,poition使用的时候加上margin来看
+
+
+scrollTop()-----获取屏幕滚动的高度
+3.尺寸
+
+height();
+width();-----获取div的高度
+innerHeight()=-----获取的高度加上内边距高度
+innerWidth();
+alert($(window).height())----浏览器窗口的高度
+alert($(document).height())---文档内容的高度
+ -->
+

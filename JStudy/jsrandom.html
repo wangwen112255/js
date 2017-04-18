@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Js随机验证码的例子</title>
+	<h2 id='randtime'></h2>
+	<button id='start'>开始</button>
+	<button id='stop'>停止</button>
+
+</head>
+<body>
+	<script type="text/javascript">
+		var num=new Array(0,1,2,3,4,5,6,7,8,9);
+		var randomobj=document.getElementById('randtime')
+		var startobj=document.getElementById('start')
+		var stopobj=document.getElementById('stop')
+		
+		var getRandCode=function (){
+		var code='';
+		for(i=0;i<4;i++){
+			var rand=Math.floor(Math.random()*num.length);
+			code+=String(num[rand])
+		}
+		randomobj.innerHTML=code;
+	   }
+	   stopobj.onclick=function(){
+	   	if(timeobj){
+	   	clearInterval(timeobj);
+	   	delete timeobj;
+	   	}
+		}
+	   startobj.onclick=function(){
+	   	if(!timeobj){
+	   	timeobj=setInterval(getRandCode,500)
+	   	}
+	   }
+	   getRandCode();
+	   timeobj=setInterval(getRandCode,100)
+		
+		
+
+	</script>
+</body>
+</html>

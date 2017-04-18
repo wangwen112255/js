@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>JS对象的深入理解</title>
+</head>
+<body onclick="click(this)">
+sdafsdfsdf
+<button id="clicks"  title="店家">点击</button>
+<script type="text/javascript">
+//这里是一个类
+	// function Cat(){
+
+		
+
+	// }
+	// // Cat();
+	// var ca=new Cat();
+	// ca.name="小花";
+	// ca.age="18";
+	// var mi=new Cat();
+	// mi.names="小白";
+	// function test(){
+	// 	alert(this.v)
+	// }
+	// var v=20;
+	// test();
+	// // alert(mi.namess)
+	// alert(ca)
+	// alert(ca)
+	// var clickobj=document.getElementById('clicks');
+	// clickobj.addEventListener('click',function(){
+	// 	alert("fdsafsdaf");
+	// })
+	// clickobj.onclick=click;
+	// function clicks(obj){
+	// 	// console.log(obj);
+	// 	console.log(obj);
+	// 	// alert(event)
+	// 	// console.log(obj.title);
+	// 	// alert(obj.title)
+	// 	// alert(0)
+	// 	// obj.innerHTML="sdafasdfsadf";
+	// }
+	// document.documentElement.onclick=function(event){
+	// 		alert(event)
+	// }
+	function Cat(name='moren'){
+		this.name=name
+		this.shout=function(){
+			alert(this.name);
+
+				
+		}
+	}
+	var cat1=new Cat();
+	Cat.prototype.names='mingtian';
+	// Cat.prototype.shout=function(){
+	// 	alert("wangwang");
+	// }
+	// cat1.name="我重新打上的";
+	var cat3=cat1;
+	cat3.name="woshicat3";
+	cat1.shout();
+	alert(cat1);
+	var  cat2=new Cat('小花');
+
+	// alert(cat2.names)
+	cat2.shout();
+	alert(cat2.constructor)
+	// cat1.shout();
+</script>	
+</body>
+
+</html>
+<!-- 
+JS中对象的深入理解
+1.澄清概念
+js中--基于对象=js面向对象
+js中没有类class，但是他取了一个原型对象
+类和对象的关系
+1.判断一个对象属不属于哪一个类
+  1).a instanceof Person
+  2) a.constructor=Person
+  JS中的对象可以进行赋值 a=b;
+2.this关键字的使用
+ function Person(){
+ var name="wangwen"//私有的
+ this.name="wangwen";//共有的。这个是共有的
+ this.show=function(){
+	alert(name),这样可以访问到其中的私有属性name
+ }
+ }
+ var name=10;----window.name=10;
+ function test(){alert(this.name)
+ 函数中的this关键字一定要看是那个对象调用这个方法，继而这个对象就是该this所指的对象、
+ -->

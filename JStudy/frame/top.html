@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>top</title>
+</head>
+<body>
+	<button id='top'>上边</button>
+	<button id='left'>左边</button>
+	<button id='right'>右边</button>
+</body>
+<script type="text/javascript">
+var tops=document.getElementById("top")
+var left=document.getElementById("left")
+var right=document.getElementById("right")
+tops.onclick=function(){
+	objs=window.top.frames;
+	// objs[0].document.body.style.background='blue'
+	// alert(1)
+	alert(objs)
+}
+</script>
+</html>

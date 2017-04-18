@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<h3>浏览器的user-agent</h3>
+	<a href="javascript:" id='aid'>点击返回</a>
+	<h1 class="h1s">明天</h1>
+	<h1 class="h1s">明天</h1>
+	<h1 class="h1s">明天</h1>
+	<hr>
+</body>
+<script type="text/javascript">
+	nav=navigator.userAgent;
+	// alert(nav)
+	arr=nav.match(/chrome|firefox/i);
+
+   // switch(arr[0].toLowerCase()){
+	  //   case 'chrome':
+	  //   alert("谷歌浏览器");
+	  //   break;
+	  //    case 'firefox':
+	  //    alert("火狐浏览器");
+	  //    break;
+   // }
+   // alert(screen.width)
+   // alert(screen.height)
+ 
+   var aidobj=document.getElementById('aid');
+   // aidobj.style.background="#ff0";
+   aidobj.onclick=function(){
+   	// history.back();
+ 	// location.href="http://www.baidu.com";
+     // alert(location.host);
+     // location.reload();//重新加载页面
+     history.back();
+
+   }
+   var hobj=document.getElementsByTagName('h1');
+   // alert(hobj[0])
+</script>
+</html>
+<!-- 学习指导 
+bom(Brower object model)
+1.
+
+
+window对象
+属性：frames//窗口数组
+   opener
+   top //顶级窗口 window.top.frames//获取其中所有的框架
+方法：
+alert()
+confirm()
+setInterval()
+setTimeout()
+clearInterval()
+cleatTimeout()
+2.Navitator对象：
+User-Agent
+可以获取其中的agent ----firefox;chrome
+3.screen
+alert()
+-->

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS的function()</title>
+</head>
+<body>
+<script type="text/javascript">
+	 // var box=function(){
+	 // 			alert(0)
+	 // }声明函数函数
+	 // var box=new Function("a",'b','return a+b')以对象的形式声明函数
+	 // function box(num)	{
+	 // 	if(num<=1){
+	 // 		return 1;
+	 // 	}
+	 // 	else{
+	 // 		return num*box(num-1);
+	 // 	}
+	 	// return sum+num;
+	 	// 
+	 // alert(typeof window)//打印出对象
+	 // alert(this)
+	 // alert(typeof this)
+	 // alert(box(3))
+	 var color="fadsfds";
+	 // var box={
+	 // 	"color":"红色的",
+	 // 	"saycolor":function(){
+	 // 		alert(this.color)
+	 // 	}
+	 // }
+	 // alert(box.saycolor()+'dsfsd')
+	 // alert(window.color)
+	 // function box(num,mum2){
+	 // 	return num+num2;
+
+	 // }
+	 // function ming(num,num2){
+	 //  return box.apply(this,arguments)
+	 // }
+	
+	 // alert(ming(2,5));
+	 //  alert(box.length)
+	 // var  num=50;
+	 //  function box(){
+	 //  	// num+=10;
+	 //  	num="100"
+	 //  	// return num;	
+	 //  }
+	 function setBox(){
+      function box(){
+      	return 123;
+      }
+      return box();
+	 }
+	 alert(setBox())
+	 // box(num)
+	 // alert(box(num))
+	  // alert(num)
+	 // alert(box)
+	 // var box="lioli";
+	 // function setBox(){
+	 // 	return 123456
+	 // }
+	 // alert(window.box)
+	 </script>
+</body>
+</html>
+<!-- 函数 
+1.函数声明方式
+ 1.function ming()
+ 2.var box=function()
+ 3.box=new Function("a",'b','return a+b')
+2.函数作为参数传入另外一个函数，穿进去的不是返回值，函数本身作为参数进行传递
+function box(sum,num){
+	return sum(num)
+}
+function sum(num){
+	return num+10
+}
+3.函数的内部属性
+  1.argumengts.callee----调用其中的自己的属性
+4.window和this
+  所有的全局变量都是window的属性值，window是对象，类型是对象，window是全局
+  this的关键字是不同的在不同对象汇总，全局是window返回的是object window,而在其他的对象中显示的是[object object ]
+  // function box(){
+  // 	alert(this)
+  // }
+  // var boxx={
+
+  // }
+  // boxx.box=box;
+  // boxx.box()
+5.函数的属性和方法
+ 属性：
+
+6.局部变量和全局变量
+  局部变量其中的
+  1.function box(name) 作为函数的参数进行传递的将会作为局部变量
+  2.function bax()不做为参数进行传递，如果去掉var 则是一个全局变量
+
+-->

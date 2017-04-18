@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js的定时跳转</title>
+</head>
+<body>
+<h1><span id='timeout'>5</span>秒钟之后进行跳转<a href="http://www.baidu.com">点击直接跳转</a></h1>
+<script type="text/javascript">
+	var timeobj=document.getElementById('timeout');
+	var num=timeobj.innerHTML;
+	// sobj=setInterval(function(){
+	// 	num--;
+	// 	if(num<=0){
+	// 		clearInterval(sobj)
+	// 		alert(num)
+	// 		location.href='http://www.baidu.com';
+	// 	}
+		
+	// 	timeobj.innerHTML=num;
+
+	// },1000)
+	alert(document.documentElement.clientHeight)
+	// location.href='http://www.baidu.com';
+
+</script>
+</body>
+</html>

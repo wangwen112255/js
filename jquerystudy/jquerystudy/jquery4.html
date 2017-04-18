@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js的效果和ajax</title>
+	<style type="text/css">
+		/* img{
+			transition:margin-left linear 5s;
+		}
+		img:hover{
+			margin-left: -20px;
+		} */
+
+	</style>
+</head>
+<body>
+	<div class="ajax" style="width:100px;height:100px;background-color:blue"></div>
+	<h1>linux</h1>
+	<p>fsdfsdflinu is much fsdfsdflinu is muc fsdfsdflinu is muc fsdfsdflinu is mucfsdfsdflinu is mucfsdfsdflinu is mucfsdfsdflinu is mucfsdfsdflinu is mucfsdfsdflinu is mucfsdfsdflinu is mucfsdfsdflinu is muc </p>
+	<p><img src="images/4_small.jpg"></p>
+	<div class="ajaxhtml"></div>
+	<script type="text/javascript" src='jquery.min.js'></script>
+	<script type="text/javascript">
+	// alert('sadfsd');		
+
+		$(function(){
+		// 	$('h1').toggle(function(){
+		// 		$(this).next().hide(10000);
+		// 	},function(){
+		// 		// alert(0)
+		// 		$(this).next().show();
+		// 		// 
+		// 	}
+		// )
+		// alert($.isArray("sdfsdf"))
+		// alert($.isFunction('sdafsd'))
+		// alert($.isEmptyObject(null))
+		alert($.param({'json':'mingtian','username':'wangwen'}));
+		// alert(('migntian').toLowerCase())
+		
+		$('h1').click(function(){
+			if($(this).next().css('display')=='block')
+			// $(this).next().slideUp(1000)
+			$(this).next().fadeOut(1000)
+			else
+				// alert(0)
+			// $(this).next().slideDown(1000);
+			$(this).next().fadeIn(1000)
+			// $(this).next().slideToggle();
+
+		})
+		$('img').mouseenter(function(){
+			$(this).animate({
+				'margin-left':'-20px',
+				// 'opacity' : '0.5',
+				//  transform:rotate(30deg);
+				'-webkit-transform':'rotate(30deg)',
+				'margin-top':'20px'
+			},1000,function(){
+				alert(0)
+			})
+		})
+		// $.ajaxStart(function(){
+		// 	alert('yjingkaishi ')
+		// })
+		$('.ajax').click(function(){
+			// $.ajaxStart(function(){
+			// 	alert('准备发送')
+			// })
+			// $(this).load('ajaxload.html');
+			$.ajax({
+				'url':'ajax.php',
+				'data':'id=dsjfsdklj',
+				'dataType':'html',
+				'type':'POST',
+				success:function(data,status,xhr){
+					// console.log(data+''+status+xhr);
+				// alert(data.username)
+				// alert(data[0].id)
+				// $.each(data,function(index,json){
+				// 		ajaxstr='<div class="aj">name:'+json.username+'age:'+json.id+'</div>';
+				// 		$('.ajaxhtml').append(ajaxstr);
+				// })	
+				alert(data)
+				// alert(JSON.parse(xhr.responseText).id)
+					
+				},
+				error:function(xhr,status){
+					// alert('您已经失败了');
+					// alert(xhr.statusText)
+					alert(status)
+				}
+
+
+			})
+
+			// alert(0)
+		});
+		
+		});
+	</script>
+</body>
+</html>
+<!-- 
+效果：
+1.基本
+show()
+hide()
+toggle()----如果对象隐藏的显示，如果是显示的则让他进行隐藏。
+2.滑动
+	slideUp------向上滑动消失
+	slideDown-----向下滑动显示
+	slideToggle()切换显示
+	fadeOut()----逐渐消失
+	fadeIn()----逐渐显示
+	fadeTo(1000,0.8)---逐渐的改变透明度
+	animate()---自定义动画
+	aniate({
+	  css样式的json对象---
+
+	}，1000时间,function(){}动画执行完毕的进行)
+3.
+
+ajax请求：
+$.get()
+$.post()
+工具：
+isArray();$.isArray()
+isFunction()-----$.isFunction(fucntion)
+trim--------------用户名的空格进行处理
+serialize()表单序列化
+param----json对象的加工，,json的转成为url参数；
+判断一个对象是不是空的可以用for(i in object)来一个东西进行相加
+ -->

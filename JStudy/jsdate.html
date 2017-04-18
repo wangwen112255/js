@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js中秒表得实现</title>
+</head>
+<body>
+	<button id='btntime'></button>
+	<hr>倒计时
+	<button id='btntimeforward'></button>
+</body>
+<script type="text/javascript">
+//  var getNowTime=function (){
+// 	var date=new Date();
+// 	var year=date.getFullYear();
+// 	var month=date.getMonth()+1;
+// 	var day=date.getDate();
+// 	var hours=date.getHours();
+// 	var minutes=date.getMinutes();
+// 	var seconds=date.getSeconds();
+// 	var btntimeobj=document.getElementById('btntime');
+// 	btntimeobj.innerHTML='当前时间是：'+year+'-'+month+'-'+day+'  '+hours+':'+minutes+':'+seconds;
+// 	}
+
+// setInterval(getNowTime,1000);
+// var btntimeforward=document.getElementById('btntimeforward');
+// ---------------
+// num=60
+// var timeout=function(){
+// if(num>0){
+// btntimeforward.innerHTML=num;
+// num--;
+// }
+// }
+// setInterval(timeout,1000)
+num=7200;
+var timeout=function(){
+if(num>0){
+hours=Math.floor(num/3600);
+minutes=Math.floor(((num-hours*3600)/60));
+seconds=num-3600*hours-60*minutes;
+btntimeforward.innerHTML='倒计时'+hours+':'+minutes+':'+seconds;
+num--;
+}
+}
+setInterval(timeout,1000)
+// getNowTime();
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时间插件</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<style type="text/css">
+		.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+		.ui-timepicker-div dl { text-align: left; }
+		.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+		.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+		.ui-timepicker-div td { font-size: 90%; }
+		.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+		.ui_tpicker_hour_label,.ui_tpicker_minute_label,.ui_tpicker_second_label,
+		.ui_tpicker_millisec_label,.ui_tpicker_time_label{padding-left:20px}
+	</style>
+</head>
+<body>
+   
+    <input type="text" name="time" 	id="timepick">
+    <input type="text" name="time" 	id="timepick1">
+	<script type="text/javascript" src='jquery.min.js'></script>
+	<script type="text/javascript" src='js/jquery-ui.js'></script>
+    <script type="text/javascript" src="js/jquery-ui-slide.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script type="text/javascript" src='js/jquery-ui-timepicker-addon.js'></script>
+	<script type="text/javascript">
+		$(function(){
+		// $('#timepick').datetimepicker();
+		$('#timepick').datetimepicker();
+		$('#timepick1').timepicker({
+			showSecond: true, 
+			showMillisec: true
+			
+			});
+
+
+
+
+		})
+
+
+
+	</script>
+</body>
+</html>

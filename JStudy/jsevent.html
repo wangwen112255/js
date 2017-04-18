@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js中的事件对象</title>
+	<style type="text/css">
+	
+	.tops{
+		background: red;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		right: 15px;
+		bottom: 15px;
+        cursor: pointer;
+        display: none;
+	}	
+	</style>
+</head>
+<body>
+   <div class="tops" id='tops'>
+   <a href="#abc">	回到顶部</a>
+   </div>
+   <a href="javascript:">店家</a>
+	<img src="img/a23333333.jpg" onclick="" id=imgs>
+	<img src="img/a3.jpg" onclick="" id=imgs3>
+	<form action="javascript:" id='fid'>
+		<input type="" id='te' name="username">
+		<input type="" name="username">
+		<select name="" id='s1'>
+			<option value="zhognguo ">中国</option>
+			<option value="zhogguo 1">中国1</option>
+			<option value="zhogguo2">中国2</option>
+		</select>
+		<input type="submit"  value='tjiao' name="">
+	</form>
+
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+<a name="abc"></a>
+	<li>121212</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+	<li>sdfsadf</li>
+<}/body>
+<script type="text/javascript">
+  top=document.getElementById("top") 
+  // alert(document.documentElement.scrollHeight);
+  sa=document.documentElement.scrollHeight
+  sc=document.documentElement.clientHeight
+  st=sa-sc;
+  alert(st);
+  // document.documentElement.scrollTop=st;
+  // alert(document.documentElement.clientHeight);
+  
+  // alert(document.documentElement.clientHeight);
+
+  	// alert(top)
+	// imgs=document.getElementById('imgs');
+	// // alert(0)
+	// // alert(imgs.clientWidth);
+	
+	// // imgs.onerror=function(){
+ // //     this.src="img/a2.jpg"
+ // //     // alert(0)
+	// // }
+	// // alert(navigator.userAgent)
+	// window.onresize=function(){
+	// 	// alert(0)
+	// 	// alert(document.documentElement.clientWidth)
+	// }
+	// s1=document.getElementById('s1');
+	// fid=document.getElementById('fid');
+	// window.onscroll=function(){
+	// 	// alert(0)
+	// 	ts=document.documentElement.scrollTop;
+	// 	if(ts>1000){
+	// 			tops.style.display='block'
+	// 	}
+	// 		else{
+	// 				tops.style.display='none'
+	// 		}
+		
+	// }
+	// s1=document.getElementById('s1');
+	// fid=document.getElementById('fid');
+	// window.onscroll=function(){
+     
+	// }
+	// alert(fid);
+	
+   // s1.onchange=function(){
+   // 	// alelert(s.)
+   // 	alert(this.value)
+   // }
+    // setTimeout(function(){
+    // fid.submit();
+   
+    // },3000)
+  //  fid.onsubmit=function(){
+  //  	// alert(0)
+
+  //   r=confirm("您去人叫？")
+  // return r;
+   
+	// te=document.getElementById('te');
+	// te.onfocus=function(){
+	// 	this.select();
+	// 	// thithis.style.outlineColor='red';
+	// 	// this.value='';// alert(0)
+	// }
+	// te.onchange=function(){
+	// 	// this.select();
+	// 	alert("在修改")
+	// 	// thithis.style.outlineColor='red';
+	// 	// this.value='';// alert(0)
+	// }
+	// moveobj=null;
+	// imgs.onclick=function(){
+	// 	moveobj=this;
+	// }
+
+    // imgs.onmouseenter=function(){
+    // this.src="img/a1.jpg"
+    // this.style.borderRadius="50px"
+    // }
+    // imgs.onmouseleave=function(){
+    // this.src="img/a2.jpg"
+    // this.style.borderRadius="50px"
+    // }
+  //   i=0
+  //   imgs.onclick=function(){
+
+  //   if(i==0)
+  //   this.src="img/a1.jpg";
+ 	// else
+  //   this.src="img/a2.jpg";
+  //   i=Math.abs(i-1)
+  //   // this.style.borderRadius="50px"
+  //   }
+    // // /
+    // document.onclick=function(e){
+    // 	x=e.clientX;
+    // 	y=e.clientY;
+    //   // document.title=x+"+"+y;
+    //   moveobj.style.top=y+"px";
+    //   moveobj.style.left=x+"px";
+    // }
+    // document.onmouseenter=function(){
+    // 	alert(0)
+
+    // }
+
+
+</script>
+</html>
+<!--
+JS的特效
+1.事件触发
+2.属性改变
+3.样式改变
+1.绑定事件的方法
+  1)内联绑定，在JS的标签身上进行绑定
+  2）外部绑定，在js的代码中进行绑定
+this指向绑定事件的人
+事件的汇总
+mouse鼠标事件
+ enter
+ leave
+ move
+ click
+  eg:
+  1.move实例（图片跟着鼠标一块移动）
+  document.onmousemove=function(e){
+    	x=e.clientX;
+    	y=e.clientY;
+      // document.title=x+"+"+y;
+      imgs.style.top=y+"px";
+      imgs.style.left=x+"px";
+    }
+    eg：循环点击
+       i=0
+       imgs.onclick=function(){
+
+       if(i==0)
+       this.src="img/a1.jpg";
+    	else
+       this.src="img/a2.jpg";
+       i=Math.abs(i-1)
+       // this.style.borderRadius="50px"
+       }
+键盘事件
+onkeyup
+onkeydown
+onkeypress
+表单事件  触发事件
+onfocus
+onblur
+onchange
+onselect()
+onsubmit() 
+onreset  form.onsubmit()
+事件方法
+select()
+focus()
+blur()
+submit()
+阻止浏览器的默认行为一般就是return  false;
+其他事件：
+1.onload 网页是否加载完毕，图片是否下载完毕，执行事件比较延后，比如代码已经执行完了，图片还没有下载，
+  1）网页加载完
+     标签记载完毕，所有的位于body后面的代码
+  2）窗口加载完毕
+     整体加载完，包括标签代码和图片
+2.onerror= 当图片加载失败的时候。
+3.onresize
+  当浏览器的大小发生改变的时候
+4.onscroll
+   可以用描点来时实现=回到顶处
+ 
+  谷歌的浏览器 document.body.scroll==
+  非谷歌的浏览器document.documentElement.scroll==
+5.组织默认行为的用fa
+<a href="javascript:">连接</a>
+<form action="javascript:" >组织表单的提交
+如果想要唤醒表单重新进行提交，可以用this.action=new url，让表单进行提交
+
+</form>
+6.js中的高度：
+1.有效地高度，屏幕可视的高度
+课时区域的高度；
+2.屏幕的总高度，
+  最后一屏幕的高度+最后一屏幕滚动的高度
+3.滚动的总高度scrollTop(谷歌 )
+top=document.getElementById("top") 
+// alert(document.documentElement.scrollHeight);
+sa=document.documentElement.scrollHeight
+sc=document.documentElement.clientHeight
+st=sa-sc;
+alert(st);
+实现当滚动到最后一屏幕的时候出现至顶
+另外还有按需加载，当到达最底端的时候进行继续加载
+--> 
+
+
+
+

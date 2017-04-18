@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery的第一节s</title>
+    <style type="text/css">
+	.meinv{
+		width: 200px;
+		height: 100px;
+		overflow: hidden;
+		float: left;
+		margin-left: 20px
+	}
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	ul{
+		height:40px;
+		background: #000;
+	}
+
+	.nav li{
+		float: left;
+		width: 100px;
+		height: 40px;
+		line-height: 40px;
+		margin-left: 20px;
+		list-style: none;
+		text-align: center;
+	    color: #fff;
+	}
+
+	.nav li:first-child{
+	background-color: #ccc;
+	}
+	.tabcontents{
+		display: none;
+	}
+	.tabcontents:first-child{
+	background-color: #ccc;
+	display:block;
+	}
+
+	img{
+		margin-left: -50px;
+	}
+	</style>
+</head>
+
+<body>
+<div class="meinv">
+<img src="images/1_small.jpg" >
+	
+</div>
+<div class="meinv">
+<img src="images/1_small.jpg">
+	</div>
+<div class="meinv">
+<img src="images/1_small.jpg">
+	
+</div>
+
+<hr>
+
+<div class="toggle" style='clear: both'>
+	<h2>点击切换</h2>
+	<p>爱上对方撒的速度的说法撒的风景离开教室的风景； 塞德里克； </p>		 	
+</div>
+<div class="toggle" >
+	<h2>点击切换</h2>
+	<p>爱上对方撒的速度的说法撒的风景离开教室的风景； 塞德里克； </p>		 	
+</div>
+<hr>
+<h1>mimgjasfsadfsadfsadfsadfadfadsfa</h1>
+<h1>mimgjasfsadfsadfsadfsadfadfadsfa</h1>
+<h1>mimgjasfsadfsadfsadfsadfadfadsfa</h1>
+<h1>mimgjasfsadfsadfsadfsadfadfadsfa</h1>
+<hr>
+<div class="parents">
+	<div class="son"><p>zheshiyifeduanluo</p>wposhiwrfsdfsadfsadfsda为人子</div>
+	<div id="son"><div>这是一个div</div>wposhiwrfsdfsadfsadfsda为人子</div>
+	<div class="son">wposhiwrfsdfsadfsadfsda为人子</div>
+	<div class="son">wposhiwrfsdfsadfsadfsda为人子</div>
+	<div class="son">wposhiwrfsdfsadfsadfsda为人子</div>
+	<div class="son"></div>
+
+</div>
+<div class="parents">
+	<div class="son"><p>zheshiyifeduanluo</p>wposhiwrfsdfsadfsadfsda为人子</div>
+	<div id="son"><div>这是一个div</div>wposhiwrfsdfsadfsadfsda为人子</div>
+	<div class="son">wposhiwrfsdfsadfsadfsda为人子</div>
+	<div class="son">wposhiwrfsdfsadfsadfsda为人子</div>
+	<div class="son">wposhiwrfsdfsadfsadfsda为人子</div>
+	<div class="son"></div>
+
+</div>
+<ul class="nav">
+	<li>第1项</li>
+	<li>第2项</li>
+	<li>第3项</li>
+</ul>
+<div class="tabs">
+	<div class="tabcontents">
+		<p>linux linuxlinuxlinux linuxlinuxlinux linuxlinuxlinux linuxlinux</p>
+		<p>linux linuxlinuxlinux linuxlinuxlinux linuxlinuxlinux linuxlinux</p><p>linux linuxlinuxlinux linuxlinuxlinux linuxlinuxlinux linuxlinux</p><p>linux linuxlinuxlinux linuxlinuxlinux linuxlinuxlinux linuxlinux</p><p>linux linuxlinuxlinux linuxlinuxlinux linuxlinuxlinux linuxlinux</p>
+	</div>
+	<div class="tabcontents">
+	php is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very much
+	</div>
+	<div class="tabcontents">
+	java is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very muchphp is very much
+	</div>
+
+</div>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+
+
+$('ul li').mouseenter(function(){
+index=$('ul li').index(this);
+$('ul li').not($(this)).css({'background-color':'#000'})
+$(this).css({'background-color':'#ccc'})
+$('.tabcontents').eq(index).show().siblings().hide();
+// $('.tabcontents').not($('.tabcontents').eq(index)).hide();
+})
+// alert(0)
+ // $('.son:not(:empty)').css({'color':'blue'}).html('zhelishkong')
+ // alert($('.parents'))
+ $('p:first-child').css({'color':'blue'})
+// ------------层级选选择气
+// $('img').hover(function(){
+// 		$(this).animate({
+// 		'margin-left':'100px'
+// 		},200)
+// },function(){
+// 		$(this).animate({
+// 			'margin-left':'0px'
+// 		},200)
+// })
+// ----
+// $("img").hover(function(){
+// this.src='images/2_small.jpg';
+// },function(){
+// this.src='images/1_small.jpg';	
+// },function(){
+// this.src='images/3_small.jpg';		
+// ----
+// $('h2').click(function(){
+// 	$(this).next().toggle(500);
+// })
+// // ---------------------
+//   obj=new new Object();
+//   obj.name='migntian'; 
+//   obj.say=function([])
+// $('img').click(function(){
+
+// 	// console.log($(this))
+
+// })
+// alert($('img').size())
+// ------------------------
+// $('h2').each(function(index,dom){
+// 	dom.style.background='#ccc';
+// // })
+// arr=new Array(1,23,45,67)
+// $.each(arr,function(index,dom){alert(dom)})
+// alert($('h2'))
+// $('h1').attr({'age':'18'})
+// $('h1').each(function(){ $(this).attr({'ages':'19'})})
+// $('h1').click(function(){
+// 	// index=$('h1').index(this)
+// 	index=$('h1').index($(this))
+// 	// 
+// 	alert(index)
+// })
+// ------each-------
+// 
+// ------------------------------
+
+</script>	
+
+</body>
+</html>
+<!-- <学习指导> 
+事件集：
+toggle()----里面传回调函数,点击的时候按顺序一次执行
+hover()----里面穿进去回调函数，移入时候和移出的时候。
+toggle();---这里的toggle是一个函数，动画中的内容
+clone()克隆其中的内容
+
+
+------第二讲Jquery的原理-----
+1.jquery和js的对象区别
+2.jquery和js的对相的转换
+3.核心方法
+4.选择器
+5.筛选
+6.属性选择器
+7.文档管理
+8.css管理
+9.效果
+10.ajax刷新
+11.工具
+	(核心方法)
+    1. js和jquery的对象区别：
+		jQuery就是js对象的一个普通对象
+		js和jquery对象的方法不能混乱使用$9
+		$(dom)->转换为jquery对象
+		$(this)和this----this代表的是dom对像
+		size()------获取长度
+		length------获取对象集合的长度
+    2.jquery中的遍历对象和数组
+		1)$().each(function(index,dom){});
+		2)$.each(obj||arr,function(){index,dom})
+	3.index()------获取其中的某一对像所有对像集合的索引值
+		obj.index()---无参数索引值按照这个对象同胞对象的所有值进行查找
+		obj.index('selector')---这个对象在选择器中所有对象的索引值
+		$("xxx").index()  //无参数，返回jquery对象中第一个元素在同辈元素中的索引值。                       后找前;  
+		$("xxx")[0].index(Selector)  //Selector参数，返回jquery对象中第一个元素在Selector中的索引值。 后找前;  
+		$("xxx").index(Element)  //dom Element参数，返回dom元素在jquery对象中的索引值。               前找后;  
+		$("xxx").index($("yyy"))  //jquery对象参数，返回jquery对象中第一个元素在jquery对象中的索引值。 前找后;  
+	4.data()在jquery身上通过data存进去一个属性，类似于attr({'name':'18'}),标签的属性不发生改变。只是给jQobj中添加属性.
+	
+-----------<选择器>---------
+	1.基本选择器
+		1).类选择器 class
+		2).#id
+		3).*
+		4)element
+		5)组合选择器,链接
+	2.层级选择器
+		1)+下一个 next()
+		2)~ 下一个全部 nextAll()
+		3>父子关系---
+	3.基本选择器
+	:eq()
+	:gt()
+	:lt()
+	:not()
+	:even
+	:odd
+	:first
+	:last
+	4.内容选择器
+     div:has(p)---div中的含有p标签的div对象
+     div：empty--div中是空的那个div对象
+     div:parent
+    5.属性选择器
+     [name='mignt']
+     [name$='msdds']以什么结尾的
+     [name^='mingaf']-----以什么进行开头的
+     [][][]并列关系
+     [name!='miosdfsd']----这里是不等于的
+     6.父子元素选择器
+
+
+
+
+
+--> 

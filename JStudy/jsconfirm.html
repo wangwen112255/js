@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS的确认框的使用</title>
+</head>
+<body>
+	<a href="http://www.baidu.com" onclick="return confirm('您确定要去哪里吗');">点击百度</a>
+	<button id='btnpromote'></button>
+	<script type="text/javascript">
+	// alert(confirm("您已经回去了")	)	
+	name=prompt('情书进去您的名字')
+	btnpromoteobj=document.getElementById('btnpromote');
+	btnpromoteobj.innerHTML=name;
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS中的进度条</title>
+</head>
+<style type="text/css">
+	#main{
+	height: 30px;
+	width: 100%;
+	background-color: #515151;
+    /* padding-top: 1px; */
+    overflow: hidden;
+	}
+	#progress{
+	height: 30px;
+	width: 1%;
+	background-color: #fcf;
+	transition: transform
+	/* margin-bottom: 1px; */
+	}
+</style>
+<body>
+<div id="main">
+	<div id="progress">
+		
+	</div>
+</div>	
+<script type="text/javascript">
+var progressobj=document.getElementById('progress');
+	p=1;
+	setInterval(function(){
+	p++;
+	progressobj.style.width=p+'%';
+	},100)
+
+</script>
+</body>
+</html>

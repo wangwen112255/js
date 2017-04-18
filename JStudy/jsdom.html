@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom对象的理解</title>
+</head>
+<body>
+	<a class="mimi" age='wangwen' id="aid" href="">,<b>链接标签</b></a>
+	<a class="mimi" age='wangwen' name='safa' href="">,<b>链接标签</b></a>
+	<img src="img/a2.jpg">
+	<select id='sid'>
+		<option>上海</option>
+		<option>北京</option>
+		<option>南京</option>
+		<option>郑州</option>
+		
+	</select>
+	<div>
+		
+		<ul>
+			<li class="fu">菜单
+			<ul class="zhe">
+				<li>子菜单</li>
+				<li>子菜单</li>
+				<li>子菜单</li>
+			</ul>
+
+			</li>
+			<li class="fu">菜单
+			<ul class="zhe">
+				<li>子菜单</li>
+				<li>子菜单</li>
+				<li>子菜单</li>
+			</ul>
+			</li>
+			<li class="fu">菜单
+			<ul class="zhe">
+				<li>子菜单</li>
+				<li>子菜单</li>
+				<li>子菜单</li>
+			</ul>
+			</li>
+			<li class="fu">菜单
+			<ul class="zhe">
+				<li>子菜单</li>
+				<li>子菜单</li>
+				<li>子菜单</li>
+			</ul>
+			</li>
+		</ul>
+
+
+		<form action="">
+			<p>请选择您的爱好</p>
+			<p>
+			<label>
+				<input type="checkbox" name="" id="">
+			</label>	
+
+			</p>
+			<p>
+			<label>
+				<input type="checkbox" name="" id="">
+			</label>	
+
+			</p>
+			<p>
+			<label>
+				<input type="checkbox" name="" id="">
+			</label>	
+
+			</p>
+			<p>
+			<label>
+				<input type="checkbox" name="" id="">
+			</label>	
+
+			</p>
+			<p><button>全选</button></p>
+			<p><button>全不选</button></p>
+			<p><button>反选</button></p>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+ // alert()
+ var aidobj=document.getElementById('aid');
+ // alert(aidobj)
+ // aidobj.style.background='#cc0'
+ // alert(aidobj.getAttribute('id'))
+ // // alert(aidobj.className)
+ // aidobj.setAttribute("class","mingtian")
+// alert(document.documentElement)
+// alert(aidobj.tagName)
+// alert(aidobj.innerHTML)
+// alert(aidobj.outerHTML)
+// alert(aidobj.textContent);
+// alert(aidobj.innerHTML);
+// alert(document.links[0].outerHTML)
+// alert(document.anchors[0].outerHTML )
+var sidobj=document.getElementById('sid')
+var zheobj=document.getElementsByClassName('zhe');
+// alert(sidobj)
+// alert(sidobj.selectedIndex)
+alert(sidobj.options[2].innerHTML)
+var liobj=document.getElementsByClassName('fu');
+for(i=0;i<liobj.length;i++){
+	liobj[i].setAttribute('line',i);
+	zheobj[i].style.display='none';
+	liobj[i].onclick=function(){
+		// this.setAttribute('num',0);
+		var num=this.getAttribute('num');
+		var line=this.getAttribute('line');
+		if(num==1){
+			zheobj[line].style.display='none';
+			this.style.backgroundColor='#fff';
+			this.setAttribute('num',Math.abs(num-1));
+
+		}
+		else{
+			// alert('dsf')
+			zheobj[line].style.display='block';
+			this.style.backgroundColor='blue';
+			this.setAttribute('num',Math.abs(num-1))
+		}
+
+	}
+}
+</script>
+</html>
+<!-- 学习指导
+元素对象的标准属性：
+1.obj.id
+2.obj.classname
+3.obj.style
+4.obj.title
+标准属性的获取直接对象.属性名称
+元素对象的非标准属性
+1.age
+2.name
+3.sex
+如果获取对象的时候
+obj.getAttribute('age')---获取属性值
+obj.get
+元素对象Js属性
+1.innerHTML  ---获取本标签的内部内容
+2.outerHTML --获取本标签的全部内容
+3.textCONTENT  --和其中的innerHTML比较相似，所有的文本内容进行打印，会屏蔽其中html标签
+4.tagName ---获取标签名
+直接获取dom对象的一些，不用获取就能直接用的
+document.links;获取其中的链接的对象结合
+document.images;
+document.forms
+document.rows
+document.cols
+document.options
+document.anchors---获取其中的描点，其中是描点的a连接标签会有一个name属性值、
+
+通常用this来记住其中的执行顺序：
+for(i=0;i<obj.length;i++){
+	obj[i].onclick=function(){
+	alert(i)
+	}
+}
+在循环体中有事件的变量不能随便用其中的变量，善于用this来代替其中的变量名
+ -->
+<!-- 1.点击显示，巧妙计数器的使用 
+2.全选。全部选，反选的时候可以用三元运算符，也可以使用其中的取反操作。最好不要用if条件进行判断；
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->

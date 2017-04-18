@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js事件方法和三种高度</title>
+<style type="text/css">
+	
+	#up{
+		border-radius: 5px;
+		background-color: #0f0;
+		text-align: center;
+		line-height: 25px;
+		
+		z-index: 2;
+	}
+	
+		input[type='file']{
+			opacity: 0;
+			z-index: 88;
+		    display: none;
+			
+		}
+		/* opacity: 0; */
+	
+</style>
+</head>
+
+<body>
+
+<p>文件上传</p>
+<!-- 
+<div style="position: relative;">
+<p>
+<input type="file" name="img" id='tid' value="sadfdsf">	
+</p>
+<button id="up">文件上传</button>
+</div>
+<p><input type="submit" name="" value="提交"></p>
+ 
+ -->
+ <form action="ming.php" method="post" id="formobj">
+ 	<p>用户名</p>
+ 	<p><input type="text" name=""></p>
+ 	<p>密码</p>
+ 	<p>
+ 		<input type="text" name="">
+ 	</p>
+  <input type="reset" value="重置" name="">
+  <input type="submit" name="" value="提交">
+
+ </form>
+ <button id="up">提交</button>
+ <p> <a id="linka" href="">baid</a></p>
+ <script type="text/javascript">
+	var tid=document.getElementById("tid")
+	var up=document.getElementById("up");
+	var linka=document.getElementById("linka");
+	var formobj=document.getElementById("formobj");
+	
+	up.onclick=function(){
+    formobj.submit();
+    // alert(0)
+	}
+	linka.onclick=function(){
+		location='http://www.baidu.com'
+	}
+	tid.onclick=function(){
+		alert(11)
+	}
+</script>
+</body>
+</html>
+<!-- sdfd
+1.常见的事件方法：
+  reset()
+  submit()
+  click()
+  blur
+  focus
+2.如何阻止标签的默认行为
+  1.retun false
+  2.例如其中的a标签  javascript
+   表单提交时候用提交的时候用到jthis。action=""
+
+
+
+
+
+
+
+
+
+
+ -->

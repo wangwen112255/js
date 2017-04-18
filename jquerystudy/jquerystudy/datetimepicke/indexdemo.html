@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时间选择器</title>
+	<link rel="stylesheet" type="text/css" href="jquery.datetimepicker.css">
+</head>
+<body>
+	<p>时间选择1</p>
+<input type="text" name="time" id="timepicker">
+	<p>时刻选择1</p>
+<input type="text" name="time" id="timepickers">
+ <script type="text/javascript" src='jquery.js'></script>	
+ <script type="text/javascript" src='build/jquery.datetimepicker.full.min.js'>
+ 	
+ 	
+ </script>	
+ <script type="text/javascript">
+ 	$(function(){
+ 		// alert(0)
+ 		$.datetimepicker.setLocale('ch');
+ 		$('#timepicker').datetimepicker();
+ 		$('#timepickers').datetimepicker({
+ 			lang:'ch',
+ 			// timepicker:false,
+ 			format:'H:i:s',
+ 			yearStart:1900,
+ 			yearEnd:2500,
+ 			todayButton:false,
+ 			datepicker:false
+
+
+ 		});
+
+ 	})
+ </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery中的事件（拖拽例子）</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+	   .menu{
+	   	width: 100px;
+	   	height: 200px;
+	   	background-color: #ccc;
+		position: absolute;
+	   }
+	   .menu li{
+	   	border-bottom: 1px solid #ffff;
+	   	text-align: center;
+	   	height: 40px;
+	   	line-height: 40px;
+	   	font-size: 16px;
+	   	color: #fff;
+	    list-style: none;
+	   }
+	   .show{
+	   	width: 60%;
+	   	height: 60px;
+	   	border-radius: 5px;
+	   	border: 1px solid black;
+	   	margin-bottom: 10px;
+	   }
+	   .closes{
+	   	float: right;
+	   	margin-right: 20px;
+	   	font-size: 24px;
+	   	cursor: pointer;
+	   }
+
+	</style>
+		
+</head>
+
+<body>
+<img src="images/3_small.jpg">
+<button id='btnbind'>绑定事件</button>
+<button id='btnunbind'>接触事件</button>
+<!-- <ul class="menu">
+	<li><a href="http://www.baidu.com">菜单1</a></li>
+	<li>菜单2</li>
+	<li>菜单3</li>
+	<li>菜单4</li>
+
+</ul>
+ -->
+<div class="mess" style='clear: both;'>
+	<textarea name="" id="" cols="30" rows="10"></textarea>
+	<button name='ti'>提交</button>
+</div>	
+<div class="main">
+	<div class="show"><span class="closes">&times;</span>fsadfsdafsdafsdafsadf</div>
+</div>
+<script type="text/javascript" src='jquery.min.js'></script>
+<script type="text/javascript">
+$('button[name="ti"]').click(function(){
+	val=$('textarea').val();
+	str='<div class="show"><span class="closes">&times;</span>'+val+"</div>";
+	$('.main').append(str);
+})
+$('.closes').live('click',function(){
+	$(this).parent().hide();
+})
+	// alert($)
+	// alert('sdfsdf');
+// $(document).ready(function(){
+// 	// alert($('img').height())	
+// 	// $('#btnbind').one('click',function(){alert('sadfds')})
+// 	// $('#btnbind').next().bind('click',function(){
+// 	// 	$('#btnbind').unbind();
+// 	// })
+// 	// $(document).click(function(){
+// 	// 	alert(0)
+// 	// })
+// 	alert(0)
+// })
+// $(document).oncontextmenu(function(event){
+// 	console.log(event.button)
+// })
+// $(document).click(function(){ alert(0)})
+// $(document).contextmenu(function(event){
+// 	// alert(0)
+// 	x=event.clientX;
+// 	y=event.clientY;
+// 	console.log(x)
+// 	// btn=event.button;
+// 	// if(btn==2){
+// 	$('.menu').css({'left':x+'px','top':y+'px'})
+// 	return false;
+// 	// }
+// })
+ document.documentElement.oncontextmenu=function(){
+ 	alert($('.menu').html())
+
+ 	// return false;
+ }
+ // $(document).click(function(){
+ // 	$(document).mousemove(function(event) {
+ // 		alert('鼠标在移动');
+ // 	});
+ // })
+</script>	
+</body>
+</html>
+<!-- 
+1.事件
+ js加载执行的时机
+ ）dom加载完毕（一般把js加载外面）
+ ）资源下载完毕
+ $('img').load(function(){
+	
+ })
+   img.onload=function=所有的图片加载完毕
+   window.onload()----所有的需要下载完毕的进行js
+ 1）页面载入
+ 2）实现dom再执行js代码的方法：
+ window.onload()=function(){}
+ $(function(){})
+ $(document).ready(function(){}
+ $(fn)------运行时机
+ 2.事件处理
+   基础事件绑定事件：bind
+   绑定事件；unbind
+   绑定事件进行一次：one('click',function)---可以控制也页面中的点击次数
+   实例：鼠标的拖动技术
+   事件委派
+   一般后来生成的dom元素绑定事件是失效的
+   尤其是append中的元素加过来的元素是不会再有任何事件的
+    如果想改变这种效果的用live进行就好了；
+    die和他的作用相反；
+2.效果
+3.ajax
+4.工具
+
+
+ -->

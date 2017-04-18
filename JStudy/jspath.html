@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js中获取其中的路径和名字</title>
+</head>
+<body>
+<script type="text/javascript">
+	url=location.href;
+	lastindex=	url.lastIndexOf('/');
+	// alert(lastindex)
+	// alert(url.substr(lastindex+1))
+	sparr=	url.split('\/');
+	alert(sparr.slice(2))
+</script>
+</body>
+</html>
