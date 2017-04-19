@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文本编辑器</title>
+	<style type="text/css">
+		.tid{
+			width: 900px;
+			height: 150px;
+		}
+	</style>
+</head>
+<body>
+
+<form action=''>
+	<p>用户名</p>
+	<p><input type="text" name="username" id=""></p>	
+    <p>内荣</p>
+	<p><input type="text" name="con" id=""></p>
+    <p>发表留言</p>
+    <p><textarea class='tid'></textarea></p>
+</form>
+	<script src='kindeditor-all-min.js' type="text/javascript"></script>
+	<script type="text/javascript">
+	KindEditor.ready(function(K){
+		editor=K.create('.tid',{
+		resizeType:0,
+		allowImageUpload:false,
+		// items:['fontname']//自己定制编辑器
+		});
+	})
+
+	</script>	
+</body>
+</html>
